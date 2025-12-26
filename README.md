@@ -3,6 +3,7 @@ projeto em docker funcionando
 FastAPI + Docker + RDS PostgreSQL
 
 API REST construída com FastAPI, containerizada com Docker, conectada a banco de dados PostgreSQL hospedado na AWS RDS.
+API construída com FastAPI, utilizando Amazon RDS para banco de dados persistente, Redis para cache de requisições frequentes, autenticação JWT com 2FA via TOTP, proteção contra força bruta com Rate Limiting e monitoramento através de Health Check. Toda a infraestrutura é orquestrada com Docker Compose para ambientes reproduzíveis."
  Estrutura do Projeto
 
 /projeto
