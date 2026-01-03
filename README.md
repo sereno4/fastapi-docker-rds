@@ -286,15 +286,15 @@ docker-compose exec airflow-postgres pg_dump -U airflow airflow > backup.sql
 Testes da API
 bash
 # Health check
-curl http://localhost:8000/health
+curl http://localhost:8004/health
 
 # Autenticação
-curl -X POST http://localhost:8000/login \
+curl -X POST http://localhost:8004/login \
   -H "Content-Type: application/json" \
   -d '{"username":"admin","password":"admin"}'
 
 # Listar embalagens (com token)
-curl http://localhost:8000/embalagens \
+curl http://localhost:8004/embalagens \
   -H "Authorization: Bearer SEU_TOKEN_JWT"
 Monitoramento Avançado
 bash
