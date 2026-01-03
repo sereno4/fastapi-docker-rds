@@ -141,11 +141,11 @@ docker-compose up -d airflow-webserver airflow-scheduler airflow-worker api
 docker-compose ps
 Acesse as interfaces
 
-FastAPI API: http://localhost:8000
+FastAPI API: http://localhost:8004/docs
 
 Airflow UI: http://localhost:8080 (usuário: , senha: )
 
-API Docs (Swagger): http://localhost:8000/docs
+API Docs (Swagger): http://localhost:8004/docs
 
 Execute as DAGs iniciais
 
