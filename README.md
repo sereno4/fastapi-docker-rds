@@ -140,6 +140,10 @@ docker-compose up -d airflow-webserver airflow-scheduler airflow-worker api
 # 5. Verifique o status
 docker-compose ps
 Acesse as interfaces
+sistema de api com sistema financeiro da empresa
+http://localhost:8001/docs
+http://localhost:8002/docs
+http://localhost:8003/docs
 
 FastAPI API: http://localhost:8004/docs
 
