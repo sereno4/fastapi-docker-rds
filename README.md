@@ -87,6 +87,9 @@ DAGs configuráveis no Airflow
 
 Agendamento flexível (cron expressions)
 
+sistema rodando em docker e ambiente aws
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/dags+projeto.png
+
 Execução distribuída com Celery
 
 Retry automático em falhas
