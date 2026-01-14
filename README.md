@@ -84,10 +84,37 @@ Logs estruturados e centralizados
 
 🔄 Orquestração
 DAGs configuráveis no Airflow
+meu-projeto-airflow/
+├── terraform/                # Infraestrutura como código
+│   ├── terraform.tf          # Arquivo principal (provider, ECS, S3, SG, etc.)
+│   ├── variables.tf          # Variáveis (região, nomes, etc.)
+│   ├── outputs.tf            # Outputs (ex.: IP público da task ECS)
+│   └── README.md             # Documentação rápida de como aplicar
+│
+├── airflow/                  # Configuração do Airflow
+│   ├── dags/                 # Suas DAGs personalizadas
+│   │   ├── exemplo_dag.py
+│   │   └── outra_dag.py
+│   ├── requirements.txt      # Dependências extras do Airflow
+│   └── Dockerfile            # Se quiser customizar a imagem do Airflow
+│
+├── lambda/                   # Funções Lambda para automação
+│   ├── resize_images.py      # Exemplo: redimensionar imagens do S3
+│   └── requirements.txt      # Dependências da função
+│
+├── s3/                       # Conteúdo público do portfólio
+│   ├── prints/               # Prints do Airflow e da infra
+│   │   ├── airflow-dag.png
+│   │   └── ecs-task.png
+│   └── index.html            # Página simples do portfólio (se usar static hosting)
+│
+└── docs/                     # Documentação e diagramas
+    ├── arquitetura.png       # Diagrama da arquitetura AWS
+    └── guia.md               # Explicação passo a passo
+
 usando terraform pra estruturar as permissoes , executar a estrutura do projeto
 terraform init, terraform plan, terraform apply
 https://terraformexecucao.s3.us-east-1.amazonaws.com/terraform.png
-
 
 Agendamento flexível (cron expressions)
 
