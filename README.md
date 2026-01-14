@@ -178,12 +178,52 @@ sistema de api com sistema financeiro da empresa
 http://localhost:8001/docs
 http://localhost:8002/docs
 http://localhost:8003/docs
-
 FastAPI API: http://localhost:8004/docs
-
 Airflow UI: http://localhost:8080 (usuário: , senha: )
-
 API Docs (Swagger): http://localhost:8004/docs
+
+📦 Projeto: Automação de Geração de Gráficos a partir de Planilhas Excel no S3
+🎯 Objetivo
+Automatizar o processamento de planilhas Excel enviadas para um bucket S3, gerando gráficos visuais com base nos dados e armazenando as imagens resultantes no próprio S3 — tudo de forma serverless, escalável e sem necessidade de servidores ou balanceadores de carga.
+
+| Componente          | Função                                                                 |
+|---------------------|------------------------------------------------------------------------|
+| **Amazon S3**       | Armazena arquivos Excel enviados (`uploads/`) e gráficos gerados (`graficos/`) |
+| **AWS Lambda**      | Função Python que processa o Excel, gera o gráfico com `matplotlib` e salva como `.png` |
+| **Lambda Layer**    | Contém bibliotecas `pandas` e `matplotlib` para leitura e visualização de dados |
+| **CloudWatch Logs** | Registra logs de execução e erros para observabilidade e auditoria |
+| **IAM Role**        | Permissões para leitura/escrita no S3 e envio de logs ao CloudWatch |
+| **S3 Event Trigger**| Dispara a função Lambda automaticamente ao detectar novos arquivos `.xlsx` em `uploads/` |
+
+📊 Visão geral do fluxo
+- Você envia um arquivo .xlsx para s3://arquivosprojeto/uploads/
+- Uma função Lambda é acionada automaticamente
+- Ela lê os dados com pandas, gera um gráfico com matplotlib
+- Salva a imagem .png em s3://arquivosprojeto/graficos/
+
+-  Funcionamento
+- O usuário envia uma planilha Excel para s3://arquivosprojeto/uploads/
+- O S3 dispara automaticamente a função Lambda
+- A Lambda:
+- Lê o arquivo com pandas
+- Gera um gráfico de barras com matplotlib
+- Salva a imagem como .png em s3://arquivosprojeto/graficos/
+- Logs são registrados no CloudWatch para auditoria e depuração
+
+
+-  Segurança e boas práticas
+- IAM com princípio do menor privilégio
+- Filtros de prefixo/sufixo no trigger S3 para evitar execuções indevidas
+- Logs estruturados no CloudWatch
+- Uso de /tmp para manipulação segura de arquivos na Lambda
+
+- print das primeiras configurações com gatilhos em arquivo prefixo upload e sufixos formato excel
+- codigo python pra Lambda:
+- https://graficoexcel.s3.us-east-1.amazonaws.com/graficos3.png
+- Lê o arquivo com pandas
+- Gera um gráfico de barras com matplotlib
+- Salva a imagem como .png em s3://arquivosprojeto/graficos/
+- Logs são registrados no CloudWatch para auditoria e depuração
 
 Execute as DAGs iniciais
 
@@ -365,6 +405,7 @@ Taxa de erro	< 0.1%	Logs agregados
 Sucesso DAGs	> 95%	Airflow metrics
 Tempo resposta alertas	< 5min	Sistema de alertas
 Freshness dos dados	< 15min	Timestamps
+
 📈 Próximos Passos
 🎯 Curto Prazo (1-2 semanas)
 Implementar testes automatizados com Pytest
