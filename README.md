@@ -84,6 +84,10 @@ Logs estruturados e centralizados
 
 🔄 Orquestração
 DAGs configuráveis no Airflow
+usando terraform pra estruturar as permissoes , executar a estrutura do projeto
+terraform init, terraform plan, terraform apply
+https://terraformexecucao.s3.us-east-1.amazonaws.com/terraform.png
+
 
 Agendamento flexível (cron expressions)
 
