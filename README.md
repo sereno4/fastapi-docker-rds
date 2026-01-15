@@ -1,4 +1,4 @@
-🚀 FastAPI + Airflow: Sistema Integrado de Monitoramento e Orquestração de Dados
+🚀 FastAPI + Airflow: Sistema Integrado de Monitoramento e Orquestração de Dados aws 
 
 Um sistema completo de microserviços para monitoramento, processamento de dados e orquestração com autenticação avançada, alertas em tempo real e escalabilidade nativa em containers.
 
@@ -224,6 +224,39 @@ Automatizar o processamento de planilhas Excel enviadas para um bucket S3, geran
 - Gera um gráfico de barras com matplotlib
 - Salva a imagem como .png em s3://arquivosprojeto/graficos/
 - Logs são registrados no CloudWatch para auditoria e depuração
+
+implementei regras de negocios e segurança no banco de dados com gatilhos 
+
+# Triggers do Banco de Dados "lab"
+
+## Visão Geral
+Total de 10 triggers implementados para garantir:
+- Integridade de dados
+- Auditoria e logging
+- Regras de negócio automáticas
+- Consistência entre tabelas relacionadas
+
+## Categorias
+
+### 1. Triggers de Auditoria/Logging (4)
+- `trg_auditar_lab` (tabela `lab`)
+- `trg_lab_log` (tabela `lab`)
+- `trg_auditar_lab1` (tabela `lab1`)
+- `trg_log_pedidos` (tabela `pedidos`)
+
+### 2. Triggers de Regras de Negócio (3)
+- `trg_atualizar_estoque` (tabela `pedido_itens`)
+- `trg_validar_limite_credito` (tabela `pedidos`)
+- `trg_atualizar_pagamento` (tabela `pedidos`)
+
+### 3. Triggers de Manutenção de Dados (3)
+- `trg_lab_stats` (tabela `lab`)
+- `trg_atualizar_valor_pedido` (tabela `pedido_itens`)
+- `trg_atualizar_ultima_compra` (tabela `pedidos`)
+
+- segue um print pra validar o processo
+
+- https://triggersql.s3.us-east-1.amazonaws.com/triggers+banco+de+dados.png
 
 Execute as DAGs iniciais
 
