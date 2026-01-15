@@ -64,6 +64,82 @@ Rate limiting em endpoints críticos
 
 CORS configurado
 
+✅ CI/CD com Terraform - Validação e Automação
+Baseado na sua execução terraform validate, você implementou Infrastructure as Code (IaC) com boas práticas:
+Fluxo CI/CD Implementado:
+# 1. Validação da configuração
+terraform validate
+
+# 2. Planejamento das mudanças
+terraform plan -out=tfplan
+
+# 3. Aplicação da infraestrutura
+terraform apply tfplan
+
+# 4. Configuração do estado remoto no S3
+terraform {
+  backend "s3" {
+    bucket = "seu-bucket-tfstate"
+    key    = "projeto-airflow/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
+Arquitetura AWS Provisionada (Terraform):
+# Estrutura provisionada:
+# ✅ Amazon ECS + Fargate (Airflow + API)
+# ✅ Amazon RDS (PostgreSQL para Airflow)
+# ✅ Amazon ElastiCache (Redis para cache)
+# ✅ Amazon S3 (Buckets para dados/static files)
+# ✅ AWS Lambda (Processamento serverless)
+# ✅ CloudWatch (Logs e métricas)
+# ✅ IAM Roles (Princípio do menor privilégio)
+# ✅ Security Groups (Firewall configurado)
+
+Pipeline CI/CD Completo
+
+.github/workflows/terraform.yml
+
+name: 'Terraform CI/CD'
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: 1.5.0
+        
+    - name: Terraform Init
+      run: terraform init
+      
+    - name: Terraform Validate
+      run: terraform validate
+      
+    - name: Terraform Plan
+      run: terraform plan -out=tfplan
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        
+    - name: Terraform Apply
+      if: github.ref == 'refs/heads/main'
+      run: terraform apply -auto-approve tfplan
+
+      
+
 📊 Processamento de Dados
 Pipeline ETL completo com Pandas
 
@@ -120,6 +196,7 @@ Agendamento flexível (cron expressions)
 
 sistema rodando em docker e ambiente aws
 https://arquivosprojeto.s3.us-east-1.amazonaws.com/dags+projeto.png
+
 
 Execução distribuída com Celery
 
