@@ -1,3 +1,7 @@
+🚀 Portfólio Técnico: Sistema Integrado de APIs, Orquestração de Dados e Observabilidade
+Um ecossistema completo de microsserviços em Python, Docker e AWS, unindo FastAPI (backend seguro com JWT + 2FA), Apache Airflow (pipelines ETL orquestrados), Prometheus/Grafana (monitoramento com métricas de negócio) e serverless com AWS Lambda (processamento automático de arquivos).
+Tudo provisionado com Infraestrutura como Código (Terraform), protegido por regras de segurança no banco de dados (triggers SQL), e preparado para produção com CI/CD, alertas inteligentes e arquitetura escalável. ( Resumo)
+
 🚀 FastAPI + Airflow: Sistema Integrado de Monitoramento e Orquestração de Dados aws 
 
 Um sistema completo de microserviços para monitoramento, processamento de dados e orquestração com autenticação avançada, alertas em tempo real e escalabilidade nativa em containers.
@@ -336,6 +340,55 @@ Total de 10 triggers implementados para garantir:
 - https://triggersql.s3.us-east-1.amazonaws.com/triggers+banco+de+dados.png
 
 Execute as DAGs iniciais
+
+
+# 🚀 API Monitorada com Flask, Prometheus e Grafana
+
+Este projeto demonstra uma API REST simples em **Python/Flask** com **monitoramento integrado** usando **Prometheus** (coleta de métricas) e **Grafana** (visualização). Ideal para aprender observabilidade, métricas de negócio e SRE em aplicações web.
+
+
+## 📦 Funcionalidades
+
+- ✅ Endpoints REST simulando operações de negócio (vendas, usuários, erros)
+- ✅ Métricas automáticas de HTTP (latência, status, contagem)
+- ✅ Métricas personalizadas:
+  - `active_users`: número de usuários ativos
+  - `sales_total`: valor total de vendas em R$
+- ✅ Integração nativa com **Prometheus**
+- ✅ Dashboard pronto para **Grafana**
+- ✅ Simulação de comportamentos reais: endpoints lentos, erros aleatórios, tráfego em background
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Backend**: Python 3.9 + Flask
+- **Monitoramento**: Prometheus + Grafana
+- **Orquestração**: Docker + Docker Compose
+- **Métricas**: `prometheus_client` (Python)
+
+---
+
+## 🚦 Como Executar
+
+### Pré-requisitos
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+- .
+├── app.py                 # Aplicação Flask principal
+├── Dockerfile             # Imagem do container da API
+├── requirements.txt       # Dependências Python
+├── docker-compose.yml     # Orquestração (API, Prometheus, Grafana)
+├── prometheus.yml         # Configuração do Prometheus
+└── grafana/               # (opcional) Provisionamento de dashboards
+
+Acesse os endpoints:
+API: http://localhost:5000
+Métricas: http://localhost:5000/metrics
+Prometheus: http://localhost:9090
+Grafana: http://localhost:3000
+
 
 bash
 # Listar DAGs disponíveis
