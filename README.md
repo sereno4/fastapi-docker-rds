@@ -1,3 +1,21 @@
+## 🎯 Para Recrutadores (Leia em 2 minutos)
+
+**O que este projeto resolve:**
+Sistema real de controle de estoque com processamento automatizado
+de dados, usado por empresas que precisam monitorar inventário 24/7.
+
+**Tecnologias principais:**
+FastAPI | Airflow | AWS | Docker | Terraform | Grafana | Lambda| S3 | Prometheus | IAM | Ecs | 
+CloudWatch |  Neo4j
+
+**Demonstra competência em:**
+- Arquitetura de sistemas escaláveis
+- Segurança (autenticação enterprise-grade)
+- DevOps e Cloud (AWS com IaC)
+- Engenharia de dados (pipelines ETL)
+
+**Tempo de setup:** 5 minutos com Docker Compose
+
 🚀 Portfólio Técnico: Sistema Integrado de APIs, Orquestração de Dados e Observabilidade
 Um ecossistema completo de microsserviços em Python, Docker e AWS, unindo FastAPI (backend seguro com JWT + 2FA), Apache Airflow (pipelines ETL orquestrados), Prometheus/Grafana (monitoramento com métricas de negócio) e serverless com AWS Lambda (processamento automático de arquivos).
 Tudo provisionado com Infraestrutura como Código (Terraform), protegido por regras de segurança no banco de dados (triggers SQL), e preparado para produção com CI/CD, alertas inteligentes e arquitetura escalável. ( Resumo)
@@ -392,6 +410,9 @@ Grafana: http://localhost:3000
 imagens dos graficos
 https://arquivosprojeto.s3.us-east-1.amazonaws.com/prometheus.png
 https://arquivosprojeto.s3.us-east-1.amazonaws.com/promethieus+1.png
+
+Grafico em grafana monitoramento de vendas em tempo real 
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/grafana+vendas.png
 
 
 bash
