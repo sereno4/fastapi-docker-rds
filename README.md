@@ -389,6 +389,10 @@ Métricas: http://localhost:5000/metrics
 Prometheus: http://localhost:9090
 Grafana: http://localhost:3000
 
+imagens dos graficos
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/prometheus.png
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/promethieus+1.png
+
 
 bash
 # Listar DAGs disponíveis
