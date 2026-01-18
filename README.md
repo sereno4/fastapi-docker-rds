@@ -360,6 +360,59 @@ Total de 10 triggers implementados para garantir:
 Execute as DAGs iniciais
 
 
+# 📊 Inteligência de Dados: Análise Preditiva de Vendas
+
+Sistema automatizado que transforma dados brutos de vendas em **insights acionáveis**, **dashboards visuais** e **previsões de receita** usando Python, AWS S3 e Machine Learning.  
+Ideal para PMEs que desejam tomar decisões baseadas em dados reais.
+
+segue o grafico https://arquivosprojeto.s3.us-east-1.amazonaws.com/ML+preditiva+de+vendas+e+estoque.png
+
+3. Arquitetura do Sistema em mermaid
+
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/diagrama.png
+
+4. Resultados com Prints (Seção Mais Importante!)
+📈 1. Total de Vendas Anual
+"Visão macro do desempenho financeiro"
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/grafico+vendas+anual.png
+
+🏆 2. Top Produtos por Receita
+"Identificação de herois de vendas e oportunidades de cross-sell"
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/grafico+vendas+produto+anual.png
+
+3. Participação no Faturamento (Donut)
+"Entendimento da dependência por categoria"
+
+ 📊 4. KPIs Estratégicos
+"Métricas que guiam decisões: ticket médio, sazonalidade, etc."
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/kpi1.png
+
+parte 2 https://arquivosprojeto.s3.us-east-1.amazonaws.com/kpi2.png
+
+🤖 5. Previsão de Vendas com ML
+"Planejamento de estoque e orçamento baseado em dados"
+
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/ML+preditiva+de+vendas+e+estoque.png
+
+## 💡 O Desafio
+Empresas perdem oportunidades por:
+- Dados de vendas isolados em planilhas
+- Falta de visibilidade em tempo real
+- Decisões baseadas em intuição, não em dados
+
+## ✅ Minha Solução
+Um pipeline **end-to-end** que:
+1. **Armazena** dados no AWS S3 (escalável e seguro)
+2. **Processa** com Python/Pandas (limpeza e agregação)
+3. **Visualiza** KPIs críticos em gráficos intuitivos
+4. **Prevê** vendas futuras com Machine Learning
+
+- **Armazenamento**: AWS S3
+- **Processamento**: Python, Pandas, Scikit-learn
+- **Visualização**: Matplotlib, Seaborn
+- **Machine Learning**: Random Forest Regressor
+- **Automação**: Google Colab (agendamento via GitHub Actions
+
 # 🚀 API Monitorada com Flask, Prometheus e Grafana
 
 Este projeto demonstra uma API REST simples em **Python/Flask** com **monitoramento integrado** usando **Prometheus** (coleta de métricas) e **Grafana** (visualização). Ideal para aprender observabilidade, métricas de negócio e SRE em aplicações web.
@@ -693,18 +746,14 @@ Push para a branch (git push origin feature/AmazingFeature)
 
 Abra um Pull Request
 
-📞 Contato
+📞 Contato 24981042582
 Se você está interessado em uma demonstração ou tem oportunidades profissionais:
-
-LinkedIn: Daniel Fonseca
+LinkedIn: Daniel Fonseca https://www.linkedin.com/in/daniel-fonseca-a56159128/
 
 GitHub: @seu-usuario
 
 Portfólio: seu-portfolio.com
 
 https://imgur.com/a/Jp6YVlx fotos sistema em produção
-
-
-
 
 Nota: Este projeto está pronto para produção e demonstra competência técnica em múltiplas áreas relevantes para vagas de engenharia de software, dados e DevOps.
