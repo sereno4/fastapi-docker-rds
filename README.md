@@ -1,5 +1,25 @@
 ## 🎯 Para Recrutadores (Leia em 2 minutos)
 
+## 💡 O Problema que Resolvo
+
+Empresas perdem oportunidades porque:
+- Dados ficam presos em planilhas
+- Não há visibilidade em tempo real
+- Decisões são baseadas em intuição, não em fatos
+
+## ✅ Minha Solução
+
+Um **ecossistema unificado** que transforma operações diárias em inteligência acionável:
+
+1. **Coleta segura** → API REST com autenticação enterprise-grade (JWT + 2FA)
+2. **Orquestração inteligente** → Airflow executa ETLs e monitora saúde do sistema
+3. **Observabilidade total** → Métricas de negócio no Grafana (vendas, usuários, latência)
+4. **Previsão com ML** → Modelo preditivo com contexto (feriados, final de semana)
+5. **Automação serverless** → Lambda gera gráficos automaticamente a partir de Excel no S3
+6. **Infraestrutura como Código** → Terraform provisiona toda a stack na AWS com segurança
+
+➡️ **Resultado**: decisões mais rápidas, estoque otimizado e redução de riscos operacionais.
+
 **O que este projeto resolve:**
 Sistema real de controle de estoque com processamento automatizado
 de dados, usado por empresas que precisam monitorar inventário 24/7.
