@@ -433,6 +433,28 @@ Um pipeline **end-to-end** que:
 - **Machine Learning**: Random Forest Regressor
 - **Automação**: Google Colab (agendamento via GitHub Actions
 
+- ## 🤖 Machine Learning com Contexto de Negócio
+
+Além da análise descritiva, implementei um **modelo preditivo inteligente** que considera fatores reais do mercado brasileiro:
+
+- **Feriados nacionais** (Natal, Carnaval, etc.)
+- **Final de semana vs dias úteis**
+- **Sazonalidade mensal**
+
+O modelo usa **Random Forest** para prever vendas diárias em 2027, com base no histórico de 2026, e gera insights acionáveis para planejamento de estoque e campanhas.
+
+Segue o grafico
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/ml_previsao_vendas.ipynb.png
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/previsao_contextual.png
+
+### 🔍 Principais capacidades:
+- Previsão de picos sazonais (ex: Dezembro)
+- Identificação de padrões de consumo (finais de semana)
+- Estimativa de receita anual com margem de erro controlada
+- Código totalmente reproduzível no Google Colab
+
+> **Arquivo**: [`notebooks/ml_previsao_vendas.ipynb`](notebooks/ml_previsao_vendas.ipynb)
+
 # 🚀 API Monitorada com Flask, Prometheus e Grafana
 
 Este projeto demonstra uma API REST simples em **Python/Flask** com **monitoramento integrado** usando **Prometheus** (coleta de métricas) e **Grafana** (visualização). Ideal para aprender observabilidade, métricas de negócio e SRE em aplicações web.
