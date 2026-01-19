@@ -807,7 +807,8 @@ Fintechs perdem milhões por ano com:
 MATCH (c1:Cliente)-[:USA]->(ip:IP)<-[:USA]-(c2:Cliente)
 WHERE c1.id < c2.id AND ip.risco = "alto"
 RETURN ip.endereco, c1.nome, c2.nome
-
+ grafico relacional
+https://arquivosprojeto.s3.us-east-1.amazonaws.com/fraude+sistema.png
 
 
 
