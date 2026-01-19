@@ -775,6 +775,42 @@ API documentation automática
 📄 Licença
 Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para detalhes.
 
+# 🛡️ Sistema Anti-Fraude Inteligente
+
+![Arquitetura Anti-Fraude](prints/grafo_fraude.png)
+
+Um sistema completo para detecção de fraudes financeiras, combinando **banco relacional** e **grafo inteligente** para identificar redes suspeitas em tempo real.
+
+## 💡 O Problema
+
+Fintechs perdem milhões por ano com:
+- Contas falsas usando múltiplas identidades
+- Transações suspeitas de IPs geograficamente inconsistentes
+- Redes organizadas compartilhando dispositivos/IPs
+
+## ✅ Minha Solução
+
+### 1. **Banco Relacional (PostgreSQL)**
+- Modelagem realista com clientes, contas, transações, IPs e dispositivos
+- Dados simulados com **casos reais de fraude**:
+  - IP russo acessando contas brasileiras
+  - Múltiplas identidades usando o mesmo dispositivo
+  - Transações de alto valor em sequência
+
+### 2. **Grafo Anti-Fraude (Neo4j)**
+- Visualização interativa de redes suspeitas
+- Detecção automática de conexões ocultas
+- Consultas prontas para investigação:
+
+```cypher
+// Detectar IPs compartilhados por múltiplos clientes
+MATCH (c1:Cliente)-[:USA]->(ip:IP)<-[:USA]-(c2:Cliente)
+WHERE c1.id < c2.id AND ip.risco = "alto"
+RETURN ip.endereco, c1.nome, c2.nome
+
+
+
+
 🤝 Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
 
